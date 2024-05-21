@@ -11,7 +11,7 @@ function getColored(data: any, state: number) {
 }
 
 function draw(state: number, ...args: any) {
-  console.log(getColored("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░", state));
+  console.log(getColored("░".repeat(process.stdout.columns), state));
   console.log("");
   if (args !== undefined || args !== null) {
     if (typeof args === "object") {
@@ -27,7 +27,7 @@ function draw(state: number, ...args: any) {
     }
   }
   console.log("");
-  console.log(getColored("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░", state));
+  console.log(getColored("░".repeat(process.stdout.columns), state));
 }
 
 export function log(...args: any) {
